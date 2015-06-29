@@ -1,0 +1,12 @@
+Title:          rsync.tcz
+Description:    File transfer and syncronization program. 
+Version:        3.1.1
+Author:         Andrew Tridgell + Various
+Original-site:  http://rsync.samba.org
+Copying-policy: GPLv3	
+Size:		328K
+Extension_by:   cbrunner
+Tags:	    File transfer syncronization program. 
+Comments:       rsync is a replacement for scp/rcp that has many more features.
+Change-log:     
+Current:        2015/06/29 Update for 64 bit

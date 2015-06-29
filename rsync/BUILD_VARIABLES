@@ -1,0 +1,5 @@
+  40 export CFLAGS="-mtune=generic -Os -pipe"
+  41 export CXXFLAGS="-mtune=generic -Os -pipe"
+  42 export LDFLAGS="-Wl,-O1"
+  78 history | grep export
+  79 history | grep export > package/env
