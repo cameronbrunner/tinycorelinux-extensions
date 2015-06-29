@@ -7,4 +7,4 @@ boot2docker 1.7.0 iso as my base development box.
 When compiling I set the environment variables in `BUILD_VARIABLES` and had the packages in
 `tce-status` installed.
 
-I followed the build instructions [http://wiki.tinycorelinux.net/wiki:creating_extensions here]
+I followed the build instructions [here](http://wiki.tinycorelinux.net/wiki:creating_extensions here).
