@@ -39,7 +39,7 @@ cd /tmp/package
 find usr -not -type d > rsync.tcz.list
 
 # Stage out
-mkdir $BUNDLE_DIR
+mkdir -p $BUNDLE_DIR
 mv /tmp/package/rsync.tcz.list $BUNDLE_DIR
 mv /tmp/rsync.tcz $BUNDLE_DIR
 cd $BUNDLE_DIR
@@ -48,3 +48,12 @@ cd $BUNDLE_DIR
 md5sum rsync.tcz > rsync.tcz.md5.txt
 SIZE=`du -h rsync.tcz | awk '{ print $1 }'`
 sed  "s/%%SIZE%%/$SIZE/" $WORK_DIR/rsync.tcz.info.tmpl > $BUNDLE_DIR/rsync.tcz.info
+
+# See if we can loopback mount...
+TMPDIR=`mktemp -d`
+if sudo mount -o loop -t squashfs $BUNDLE_DIR/rsync.tcz $TMPDIR; then
+   sudo umount $TMPDIR
+   sudo submitqc5
+else
+   echo "Skipping submit tests since --privileged was not specified"
+fi

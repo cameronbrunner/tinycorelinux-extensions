@@ -12,9 +12,11 @@ the images in the `../dev-images/` directory.
 If you plan on doing a submission first update rsync.tcz.info.tmpl with your TCL user name.
 
 * If you want to run the submission tests
-`docker run -t -i --privileged tiny_dev:rsync`
+`mkdir bundle`
+`docker run -t -i  -v `pwd`/bundle:/scratch/bundle --privileged tiny_dev:rsync`
 
 * If you want to run the submission tests somewhere else or don't want --privileged
-`docker run -t -i tiny_dev:rsync`
+`mkdir bundle`
+`docker run -t -i  -v `pwd`/bundle:/scratch/bundle tiny_dev:rsync`
 
-The output files will be in a datavolume '/scratch' in the container.
+The output files will be in '`pwd`/bundle'.
