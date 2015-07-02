@@ -43,6 +43,10 @@ mkdir -p $BUNDLE_DIR
 mv /tmp/package/rsync.tcz.list $BUNDLE_DIR
 mv /tmp/rsync.tcz $BUNDLE_DIR
 cd $BUNDLE_DIR
+# Generate deps
+echo "acl.tcz" > rsync.tcz.dep
+echo "attr.tcz" >> rsync.tcz.dep
+
 
 # MD5 Sum for submission
 md5sum rsync.tcz > rsync.tcz.md5.txt
