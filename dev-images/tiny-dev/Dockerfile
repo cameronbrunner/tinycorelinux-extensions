@@ -1,2 +1,2 @@
-FROM tatsushid/tinycore:6.3-x86_64
+FROM tatsushid/tinycore:latest
 RUN tce-load -wic perl5 compiletc
