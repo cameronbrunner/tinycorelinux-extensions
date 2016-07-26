@@ -5,7 +5,7 @@ set -x
 WORK_DIR="/scratch"
 BUNDLE_DIR="$WORK_DIR/bundle"
 RSYNC_BASE="https://download.samba.org/pub/rsync"
-RSYNC_ARCHIVE="rsync-3.1.1.tar.gz"
+RSYNC_ARCHIVE="rsync-3.1.2.tar.gz"
 RSYNC_URL="$RSYNC_BASE/$RSYNC_ARCHIVE"
 RSYNC_DIR=`echo $RSYNC_ARCHIVE | sed 's/\.tar\.gz//'`
 

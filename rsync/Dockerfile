@@ -1,7 +1,6 @@
 FROM cameronbrunner/tinycorelinux-extensions:submit
-#VOLUME /scratch
 # Need the openssl package to get certificate bundle
-RUN tce-load -wci openssl-1.0.0
+RUN tce-load -wci openssl
 COPY build-rsync.sh /scratch/
 COPY rsync.tcz.info.tmpl /scratch/
 USER tc
